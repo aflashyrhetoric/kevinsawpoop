@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <Poop msg="Welcome to Your Vue.js App"/>
+    <Poop />
   </div>
 </template>
 
@@ -11,7 +11,7 @@ import Poop from "@/components/Poop.vue";
 export default {
   name: "home",
   components: {
-   Poop 
+    Poop
   }
 };
 </script>

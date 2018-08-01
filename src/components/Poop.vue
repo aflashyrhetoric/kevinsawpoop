@@ -3,7 +3,7 @@
     <h1>Kevin Saw Poop In NYC</h1>
     <ul>
       <li v-for="poop in poopSightings" :key="poop.key">
-        {{ poop[".key"] }}
+        {{ poop.time | formatTime }}
       </li>
     </ul>
   </div>
@@ -11,6 +11,7 @@
 
 <script>
 import db from "../db";
+import dayjs from "dayjs";
 
 export default {
   name: "HelloWorld",
@@ -22,6 +23,11 @@ export default {
   firebase: {
     poopSightings: {
       source: db.ref("poopsightings")
+    }
+  },
+  filters: {
+    formatTime(val) {
+      return dayjs(val).format('MMMM D, YYYY HH:mm:ss  A')
     }
   }
 };
