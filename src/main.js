@@ -14,11 +14,5 @@ Vue.config.productionTip = false;
 new Vue({
   router,
   store,
-  firebase: {
-    testValue: {
-      source: db.ref("data/cheese"),
-      asObject: true
-    }
-  },
   render: h => h(App)
 }).$mount("#app");
