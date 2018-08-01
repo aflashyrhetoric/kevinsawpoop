@@ -8,7 +8,6 @@
       <li
         v-for="poop in poopSightings.slice().reverse()"
         :key="poop.key">
-        
           <span class="highlight">On {{ poop.time | getDay }} at {{ poop.time | getTime }},</span><span class="normal"> while {{ poop.activity}}, <span class="sawpoo">Kevin saw poo</span>:(</span>
       </li>
     </ul>
@@ -43,6 +42,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import "../basics";
+
 .PoopContainer {
   display: flex;
   flex-flow: column nowrap;
@@ -56,18 +57,24 @@ export default {
     margin-bottom: 20px;
   }
   .highlight {
+    width: 100%;
     padding: 10px;
-    width: 230px;
     display: inline-block;
     background-color: #2b0025;
     color: white;
     font-family: "eldwin-script", sans-serif;
     font-weight: bold;
+    @include bp(md) {
+      width: 230px;
+    }
   }
   .normal {
     font-size: 20px;
     font-weight: light;
     font-family: "Roboto", sans-serif;
+    @include bp(md) {
+      padding-left: initial;
+    }
   }
   &__hero {
     display: flex;
@@ -80,6 +87,15 @@ export default {
     margin-bottom: 25px;
   }
   &__data {
+    display: flex;
+    flex-flow: column nowrap;
+    max-width: 95%;
+
+    @include bp(md) {
+      display: list-item;
+      flex-flow: initial;
+      max-width: initial;
+    }
     list-style: none;
     padding: 0;
     font-size: 18px;
@@ -87,9 +103,15 @@ export default {
     margin: auto;
 
     li {
+      margin-bottom: 15px;
+      max-width: 100%;
+      overflow: hidden;
       border: 1px solid gray;
       margin-top: -1px;
       padding-right: 10px;
+      @include bp(md) {
+        margin-bottom: 0;
+      }
     }
   }
 }
