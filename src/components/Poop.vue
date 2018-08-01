@@ -1,6 +1,11 @@
 <template>
   <div class="hello">
-    {{ testValue.cheese }}
+    <h1>Kevin Saw Poop In NYC</h1>
+    <ul>
+      <li v-for="poop in poopSightings" :key="poop.key">
+        {{ poop[".key"] }}
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -11,13 +16,12 @@ export default {
   name: "HelloWorld",
   data() {
     return {
-      testValue: []
+      poopSightings: []
     };
   },
   firebase: {
-    testValue: {
-      source: db.ref("data"),
-      asObject: true
+    poopSightings: {
+      source: db.ref("poopsightings")
     }
   }
 };
