@@ -27,7 +27,7 @@ export default {
   },
   filters: {
     formatTime(val) {
-      return dayjs(val).format('MMMM D, YYYY HH:mm:ss  A')
+      return dayjs(val).format("MMMM D, YYYY HH:mm:ss  A");
     }
   }
 };
