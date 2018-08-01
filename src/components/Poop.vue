@@ -3,6 +3,7 @@
     <div class="PoopContainer__hero">
       <h1>Kevin Saw Poo</h1>
     </div>
+    <router-link to="/faq">But Kevin, why did you make this?</router-link>
     <ul class="PoopContainer__data">
       <li
         v-for="poop in poopSightings.slice().reverse()"
@@ -43,14 +44,38 @@ export default {
 
 <style scoped lang="scss">
 .PoopContainer {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  h1 {
+    font-family: 'sheila', script, sans-serif;
+    font-size: 50px;
+  }
+  a {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  .highlight {
+    padding: 10px;
+    display: inline-block;
+    background-color: #2B0025;
+    color: white;
+    font-family: 'eldwin-script', sans-serif;
+    font-weight: bold;
+  }
+  .normal {
+    font-size: 20px;
+    font-weight: light;
+    font-family: 'Roboto', sans-serif;
+  }
   &__hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 130px;
     background: linear-gradient(to bottom right, #822D99, #BC131D);
     color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin-bottom: 25px;
   }
   &__data {
@@ -62,28 +87,8 @@ export default {
 
     li {
       border: 1px solid gray;
-    }
-    li:not(:first-child) {
-      position: relative;
-      top: -1px;
+      margin-top: -1px;
     }
   }
-}
-h1 {
-  font-family: 'sheila', script, sans-serif;
-  font-size: 50px;
-}
-.highlight {
-  padding: 10px;
-  display: inline-block;
-  background-color: blue;
-  color: white;
-  font-family: 'Roboto', sans-serif;
-  font-weight: bold;
-}
-.normal {
-  font-size: 20px;
-  font-weight: light;
-  font-family: 'Roboto', sans-serif;
 }
 </style>

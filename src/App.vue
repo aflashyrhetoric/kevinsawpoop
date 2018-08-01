@@ -11,5 +11,6 @@
 <style lang="scss">
 body {
   margin: 0;
+  font-family: 'roboto', sans-serif;
 }
 </style>
