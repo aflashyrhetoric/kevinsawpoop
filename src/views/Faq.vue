@@ -1,6 +1,6 @@
 <template>
   <div class="FAQ">
-    <h1 class="animated wobble">BECAUSE YALL DIDNT BELIEVE ME</h1>
+    <h1 class="animated wobble">BECAUSE YALL DIDNT BELIEVE ME ABOUT HOW MUCH POO THERE IS IN NYC I TOLD YOU</h1>
     <router-link to="/">Go back</router-link>
   </div>
 </template>
