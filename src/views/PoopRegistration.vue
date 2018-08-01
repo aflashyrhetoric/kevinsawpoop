@@ -18,7 +18,7 @@ export default {
   data() {
     return {
       poopSightings: [],
-      activity: ''
+      activity: ""
     };
   },
   firebase: {

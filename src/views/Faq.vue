@@ -6,12 +6,8 @@
 </template>
 
 <script>
-import db from "../db";
-
-const poopRef = db.ref("poopsightings");
-
 export default {
-  name: "FAQ",
+  name: "FAQ"
 };
 </script>
 
@@ -22,7 +18,8 @@ export default {
   align-items: center;
   flex-flow: column nowrap;
 
-  h1, a {
+  h1,
+  a {
     margin: 0;
     font-size: 200px;
   }

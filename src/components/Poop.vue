@@ -48,7 +48,7 @@ export default {
   flex-flow: column nowrap;
   align-items: center;
   h1 {
-    font-family: 'sheila', script, sans-serif;
+    font-family: "sheila", script, sans-serif;
     font-size: 50px;
   }
   a {
@@ -58,15 +58,15 @@ export default {
   .highlight {
     padding: 10px;
     display: inline-block;
-    background-color: #2B0025;
+    background-color: #2b0025;
     color: white;
-    font-family: 'eldwin-script', sans-serif;
+    font-family: "eldwin-script", sans-serif;
     font-weight: bold;
   }
   .normal {
     font-size: 20px;
     font-weight: light;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
   }
   &__hero {
     display: flex;
@@ -74,7 +74,7 @@ export default {
     align-items: center;
     width: 100%;
     height: 130px;
-    background: linear-gradient(to bottom right, #822D99, #BC131D);
+    background: linear-gradient(to bottom right, #822d99, #bc131d);
     color: white;
     margin-bottom: 25px;
   }
