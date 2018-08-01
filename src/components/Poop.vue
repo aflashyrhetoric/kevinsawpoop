@@ -1,10 +1,10 @@
 <template>
   <div class="PoopContainer">
-    <div class="PoopContainer__hero">
-      <h1>Kevin Saw Poo</h1>
+    <div class="PoopContainer__hero animated fadeIn">
+      <h1 class="animated fadeInDown delay-1s">Kevin Saw Poo</h1>
     </div>
-    <router-link to="/faq">But Kevin, why did you make this?</router-link>
-    <ul class="PoopContainer__data">
+    <router-link to="/faq" class="animated fadeIn">But Kevin, why did you make this?</router-link>
+    <ul class="PoopContainer__data animated fadeIn">
       <li
         v-for="poop in poopSightings.slice().reverse()"
         :key="poop.key">
