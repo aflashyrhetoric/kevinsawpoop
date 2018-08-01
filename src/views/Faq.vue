@@ -23,7 +23,10 @@ export default {
   h1,
   a {
     margin: 0;
-    font-size: 140px;
+    font-size: 80px;
+    @include bp(sm) {
+      font-size: 190px;
+    }
     @include bp(md) {
       font-size: 200px;
     }
