@@ -1,16 +1,24 @@
 <template>
   <div class="hello">
-    { testValue }
+    {{ testValue.cheese }}
   </div>
 </template>
 
 <script>
+import db from "../db";
+
 export default {
   name: "HelloWorld",
-  firebase: function() {
+  data() {
     return {
-      testValue: this.db.ref("test")
+      testValue: []
     };
+  },
+  firebase: {
+    testValue: {
+      source: db.ref("data"),
+      asObject: true
+    }
   }
 };
 </script>
