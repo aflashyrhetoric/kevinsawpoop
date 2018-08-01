@@ -13,6 +13,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+@import "../basics";
+
 .FAQ {
   display: flex;
   align-items: center;
@@ -21,7 +23,13 @@ export default {
   h1,
   a {
     margin: 0;
-    font-size: 200px;
+    font-size: 140px;
+    @include bp(md) {
+      font-size: 200px;
+    }
+    @include bp(lg) {
+      font-size: 250px;
+    }
   }
 }
 </style>

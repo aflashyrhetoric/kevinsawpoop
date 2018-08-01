@@ -57,6 +57,7 @@ export default {
   }
   .highlight {
     padding: 10px;
+    width: 230px;
     display: inline-block;
     background-color: #2b0025;
     color: white;
@@ -82,12 +83,13 @@ export default {
     list-style: none;
     padding: 0;
     font-size: 18px;
-    max-width: 700px;
+    width: 700px;
     margin: auto;
 
     li {
       border: 1px solid gray;
       margin-top: -1px;
+      padding-right: 10px;
     }
   }
 }
