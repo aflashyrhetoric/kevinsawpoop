@@ -1,9 +1,14 @@
 <template>
-  <div class="hello">
-    <h1>Kevin Saw Poop In NYC</h1>
-    <ul>
-      <li v-for="poop in poopSightings" :key="poop.key">
-        {{ poop.time | formatTime }}
+  <div class="PoopContainer">
+    <div class="PoopContainer__hero">
+      <h1>Kevin Saw Poo</h1>
+    </div>
+    <ul class="PoopContainer__data">
+      <li
+        v-for="poop in poopSightings.slice().reverse()"
+        :key="poop.key">
+        
+          <span class="highlight">On {{ poop.time | getDay }} at {{ poop.time | getTime }},</span><span class="normal"> while {{ poop.activity}}, <span class="sawpoo">Kevin saw poo</span>:(</span>
       </li>
     </ul>
   </div>
@@ -26,13 +31,59 @@ export default {
     }
   },
   filters: {
-    formatTime(val) {
-      return dayjs(val).format("MMMM D, YYYY HH:mm:ss  A");
+    getTime(val) {
+      return dayjs(val).format("HH:mm A");
+    },
+    getDay(val) {
+      return dayjs(val).format("MMMM D");
     }
   }
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+.PoopContainer {
+  &__hero {
+    width: 100%;
+    height: 130px;
+    background: linear-gradient(to bottom right, #822D99, #BC131D);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+  &__data {
+    list-style: none;
+    padding: 0;
+    font-size: 18px;
+    max-width: 700px;
+    margin: auto;
+
+    li {
+      border: 1px solid gray;
+    }
+    li:not(:first-child) {
+      position: relative;
+      top: -1px;
+    }
+  }
+}
+h1 {
+  font-family: 'sheila', script, sans-serif;
+  font-size: 50px;
+}
+.highlight {
+  padding: 10px;
+  display: inline-block;
+  background-color: blue;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+}
+.normal {
+  font-size: 20px;
+  font-weight: light;
+  font-family: 'Roboto', sans-serif;
+}
 </style>

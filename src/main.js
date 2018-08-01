@@ -4,9 +4,6 @@ import router from "./router";
 import store from "./store";
 import VueFire from "vuefire";
 // import Firebase from "firebase";
-import db from "./db";
-
-console.log(db.ref("test/"));
 
 Vue.use(VueFire);
 Vue.config.productionTip = false;

@@ -1,6 +1,7 @@
 <template>
   <div class="PoopRegistration">
     <h1>Hi Kevin add poop sightings here</h1>
+    <input type="text" name="activity" v-model="activity">
     <a href="" @click="addPoop">
       I Seen'd Poop
     </a>
@@ -16,7 +17,8 @@ export default {
   name: "HelloWorld",
   data() {
     return {
-      poopSightings: []
+      poopSightings: [],
+      activity: ''
     };
   },
   firebase: {
@@ -27,7 +29,8 @@ export default {
   methods: {
     addPoop: function() {
       poopRef.push({
-        time: Date.now()
+        time: Date.now(),
+        activity: this.activity
       });
     }
   }
