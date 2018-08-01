@@ -2,6 +2,7 @@
   <div class="PoopContainer">
     <div class="PoopContainer__hero animated fadeIn">
       <h1 class="animated fadeInDown delay-1s">Kevin Saw Poo</h1>
+      <p class="animated fadeInDown delay-2s">in NYC</p>
     </div>
     <router-link to="/faq" class="animated fadeIn">But Kevin, why did you make this?</router-link>
     <ul class="PoopContainer__data animated fadeIn">
@@ -78,13 +79,16 @@ export default {
   }
   &__hero {
     display: flex;
+    flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 130px;
     background: linear-gradient(to bottom right, #822d99, #bc131d);
     color: white;
     margin-bottom: 25px;
+    @include bp(md) {
+      height: 250px;
+    }
   }
   &__data {
     display: flex;
